@@ -1,4 +1,4 @@
 uws-api-server:
   host: "lsst-nts-k8s.ncsa.illinois.edu"
   image:
-    tag: "0.1.0"
+    tag: "0.2.0"
