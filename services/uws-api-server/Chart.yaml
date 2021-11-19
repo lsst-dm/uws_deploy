@@ -1,3 +1,7 @@
-apiVersion: v1
+apiVersion: v2
 name: uws-api-server
 version: 0.2.6
+dependencies:
+- name: uws-api-server
+  version: 0.2.10
+  repository: https://lsst-dm.github.io/charts/
