@@ -43,14 +43,14 @@ uws-api-server:
   - name: data-auxtel
     server: auxtel-archiver.tu.lsst.org
     claimName: data-auxtel-pvc
-    mountPath: "/data/lsstdata/base/auxtel"
-    exportPath: "/lsstdata/base/auxtel"
+    mountPath: "/data/lsstdata/TTS/auxtel"
+    exportPath: "/lsstdata/TTS/auxtel"
     subPath: ""
     readOnly: true
   - name: data-comcam
     server: comcam-archiver.tu.lsst.org
     claimName: data-comcam-pvc
-    mountPath: "/data/lsstdata/base/comcam"
-    exportPath: "/lsstdata/base/comcam"
+    mountPath: "/data/lsstdata/TTS/comcam"
+    exportPath: "/lsstdata/TTS/comcam"
     subPath: ""
     readOnly: true
