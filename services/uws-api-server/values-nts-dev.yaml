@@ -1,40 +1,41 @@
 uws-api-server:
   targetCluster: "nts"
   hostname: lsst-nts-k8s.ncsa.illinois.edu
-  image:
-    tag: v1.0.0
+  basePath: "dev-uws-server"
+  client:
+    enabled: true
   workingVolume:
     name: job-files
     server: lsst-l1-cl-arctl.ncsa.illinois.edu
     exportPath: "/scratch/uws"
-    claimName: uws-server-pvc
+    claimName: dev-uws-server-pvc
     mountPath: "/uws"
-    subPath: ""
+    subPath: "dev"
   volumes:
   - name: repo
     server: lsst-l1-cl-arctl.ncsa.illinois.edu
-    claimName: repo-pvc
+    claimName: dev-repo-pvc
     mountPath: "/repo"
     exportPath: "/repo"
     subPath: ""
     readOnly: false
   - name: project
     server: lsst-l1-cl-arctl.ncsa.illinois.edu
-    claimName: project-pvc
+    claimName: dev-project-pvc
     mountPath: "/project"
     exportPath: "/project"
     subPath: ""
     readOnly: false
   - name: data
     server: lsst-l1-cl-arctl.ncsa.illinois.edu
-    claimName: data-pvc
+    claimName: dev-data-pvc
     mountPath: "/data/lsstdata/NTS"
     exportPath: "/data/lsstdata/NTS"
     subPath: ""
     readOnly: true
   - name: home
     server: lsst-l1-cl-arctl.ncsa.illinois.edu
-    claimName: home-pvc
+    claimName: dev-home-pvc
     mountPath: "/jhome"
     exportPath: "/jhome"
     subPath: ""
