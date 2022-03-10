@@ -1,4 +1,0 @@
-uws-api-server:
-  host: "lsst-nts-k8s.ncsa.illinois.edu"
-  image:
-    tag: "latest"

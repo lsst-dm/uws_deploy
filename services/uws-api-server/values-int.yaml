@@ -1,0 +1,2 @@
+uws-api-server:
+  targetCluster: "int"
