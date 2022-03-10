@@ -18,13 +18,6 @@ uws-api-server:
     exportPath: "/project"
     subPath: ""
     readOnly: false
-  - name: home
-    server: nfs1.cp.lsst.org
-    claimName: home-pvc
-    mountPath: "/jhome"
-    exportPath: "/jhome"
-    subPath: ""
-    readOnly: false
   - name: repo-latiss
     server: atarchiver.cp.lsst.org
     claimName: repo-latiss-pvc
