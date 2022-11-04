@@ -3,6 +3,7 @@ hostname: tucson-teststand.lsst.codes
 image:
   tag: latest
 logLevel: INFO
+vaultPathPrefix: secret/k8s_operator/tucson-teststand.lsst.codes
 workingVolume:
   name: job-files
   server: nfs-scratch.tu.lsst.org
