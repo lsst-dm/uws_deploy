@@ -1,7 +1,8 @@
 targetCluster: "summit"
 hostname: summit-lsp.lsst.codes
 image:
-  tag: v1.0.0
+  tag: latest
+vaultPathPrefix: secret/k8s_operator/summit-lsp.lsst.codes
 workingVolume:
   name: job-files
   server: nfs1.cp.lsst.org
