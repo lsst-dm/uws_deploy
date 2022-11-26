@@ -3,6 +3,10 @@ hostname: summit-lsp.lsst.codes
 image:
   tag: latest
 vaultPathPrefix: secret/k8s_operator/summit-lsp.lsst.codes
+butler:
+  secretKey: butler-secret
+  containerPath: /home/lsst/.lsst
+  dbUser: oods
 workingVolume:
   name: job-files
   server: nfs1.cp.lsst.org

@@ -20,6 +20,8 @@ data:
         tag: "{{ .Values.job.image.tag }}"
       securityContext:
         {{- toYaml .Values.job.securityContext | nindent 8 }}
+    {{- if .Values.butler }}
     butler:
       containerPath: "{{ .Values.butler.containerPath }}"
       dbUser: "{{ .Values.butler.dbUser }}"
+    {{- end }}
