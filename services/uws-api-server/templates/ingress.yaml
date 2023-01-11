@@ -16,6 +16,7 @@ spec:
       http:
         paths:
           - path: /{{ .Values.basePath }}(/|$)(.*)
+            pathType: "ImplementationSpecific"
             backend:
               service:
                 name: {{ .Release.Name }}-server
