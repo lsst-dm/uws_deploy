@@ -13,6 +13,8 @@ hostname: ""
 basePath: "uws-server"
 # -- Log level of server. Set to "DEBUG" for highest verbosity
 logLevel: "WARNING"
+# -- Site-specific Vault path for secrets.
+vaultPathPrefix: ""
 server:
   securityContext:
     # -- Set the UID for the UWS server container entrypoint
@@ -37,6 +39,12 @@ job:
     runAsGroup: 202
     # -- Set the filesystem GID for the mounted volumes in the UWS job container
     fsGroup: 202
+# -- Configuration for Postgres backed butlers
+# The object must have the following attributes defined:
+# _secretKey_ (A label that points to the VaultSecret for the postgres credentials)
+# _containerPath_ (The directory location in the container for the Butler secret)
+# _dbUser_ (The database user name for butler access)
+butlerPg: {}
 workingVolume:
   # -- A label identifier for the working volume
   name: job-files

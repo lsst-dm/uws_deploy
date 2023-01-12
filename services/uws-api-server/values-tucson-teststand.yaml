@@ -3,6 +3,11 @@ hostname: tucson-teststand.lsst.codes
 image:
   tag: latest
 logLevel: INFO
+vaultPathPrefix: secret/k8s_operator/tucson-teststand.lsst.codes
+butlerPg:
+  secretKey: butler-secret
+  containerPath: /home/lsst/.lsst
+  dbUser: oods
 workingVolume:
   name: job-files
   server: nfs-scratch.tu.lsst.org

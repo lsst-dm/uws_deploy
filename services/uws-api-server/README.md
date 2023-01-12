@@ -9,6 +9,7 @@ Helm chart for deploying the Universal Worker Service API Server
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | basePath | string | `"uws-server"` | The base path for the client ingress |
+| butlerPg | object | `{}` | Configuration for Postgres backed butlers The object must have the following attributes defined: _secretKey_ (A label that points to the VaultSecret for the postgres credentials) _containerPath_ (The directory location in the container for the Butler secret) _dbUser_ (The database user name for butler access) |
 | client.enabled | bool | `false` | Turn on the UWS client system if desired |
 | hostname | string | `""` | Hostname for the client ingress |
 | image.repository | string | `"lsstdm/uws-api-server"` | The Docker registry name of the UWS server container image |
@@ -24,6 +25,7 @@ Helm chart for deploying the Universal Worker Service API Server
 | server.securityContext.runAsGroup | int | `202` | Set the GID for the UWS server container entrypoint |
 | server.securityContext.runAsUser | int | `1000` | Set the UID for the UWS server container entrypoint |
 | targetCluster | string | `""` | Target Kubernetes cluster |
+| vaultPathPrefix | string | `""` | Site-specific Vault path for secrets. |
 | volumes | list | `[]` | Central data volumes to be mounted in job containers. Each object listed can have the following attributes defined: _name_ (A label identifier for the data volume mount) _server_ (The hostname for the NFS server with the data volume mount) _claimName_ (The PVC claim name for the data volume mount) _mountPath_ (The mount path in the server container for the data volume mount) _exportPath_ (The export path on the NFS server for the data volume mount) _subPath_ (A possible sub path for the data volume mount) _readOnly_ (Flag to mark the data volume mount as read only or read/write) |
 | workingVolume.claimName | string | `""` | The PVC claim name for the working volume |
 | workingVolume.exportPath | string | `""` | The export path on the NFS server for the working volume |
