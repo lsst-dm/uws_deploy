@@ -4,7 +4,7 @@ image:
   tag: latest
 logLevel: INFO
 vaultPathPrefix: secret/k8s_operator/tucson-teststand.lsst.codes
-butler:
+butlerPg:
   secretKey: butler-secret
   containerPath: /home/lsst/.lsst
   dbUser: oods

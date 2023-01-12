@@ -44,7 +44,7 @@ job:
 # _secretKey_ (A label that points to the VaultSecret for the postgres credentials)
 # _containerPath_ (The directory location in the container for the Butler secret)
 # _dbUser_ (The database user name for butler access)
-butler: {}
+butlerPg: {}
 workingVolume:
   # -- A label identifier for the working volume
   name: job-files

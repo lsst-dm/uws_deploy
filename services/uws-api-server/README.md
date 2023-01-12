@@ -9,7 +9,7 @@ Helm chart for deploying the Universal Worker Service API Server
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | basePath | string | `"uws-server"` | The base path for the client ingress |
-| butler | object | `{}` | Configuration for Postgres backed butlers The object must have the following attributes defined: _secretKey_ (A label that points to the VaultSecret for the postgres credentials) _containerPath_ (The directory location in the container for the Butler secret) _dbUser_ (The database user name for butler access) |
+| butlerPg | object | `{}` | Configuration for Postgres backed butlers The object must have the following attributes defined: _secretKey_ (A label that points to the VaultSecret for the postgres credentials) _containerPath_ (The directory location in the container for the Butler secret) _dbUser_ (The database user name for butler access) |
 | client.enabled | bool | `false` | Turn on the UWS client system if desired |
 | hostname | string | `""` | Hostname for the client ingress |
 | image.repository | string | `"lsstdm/uws-api-server"` | The Docker registry name of the UWS server container image |
