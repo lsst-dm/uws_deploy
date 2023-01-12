@@ -1,4 +1,5 @@
 targetCluster: "base-teststand"
+createNamespace: true
 hostname: base-lsp.lsst.codes
 image:
   tag: latest

@@ -1,0 +1,10 @@
+{{- if .Values.createNamespace }}
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: uws
+spec:
+  finalizers:
+    - kubernetes
+{{- end }}
