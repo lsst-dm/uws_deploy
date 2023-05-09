@@ -68,3 +68,6 @@ workingVolume:
 # _subPath_ (A possible sub path for the data volume mount)
 # _readOnly_ (Flag to mark the data volume mount as read only or read/write)
 volumes: []
+# -- Temporary flag to make service deploy own namespace.
+# Doing this to not disrupt other sites.
+createNamespace: false
