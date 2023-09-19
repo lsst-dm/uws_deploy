@@ -2,7 +2,7 @@ targetCluster: "base-teststand"
 createNamespace: true
 hostname: base-lsp.lsst.codes
 image:
-  tag: latest
+  tag: dev
 logLevel: DEBUG
 vaultPathPrefix: secret/k8s_operator/base-lsp.lsst.codes
 butlerPg:
