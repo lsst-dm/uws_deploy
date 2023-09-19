@@ -3,7 +3,7 @@ createNamespace: true
 hostname: base-lsp.lsst.codes
 image:
   tag: latest
-logLevel: INFO
+logLevel: DEBUG
 vaultPathPrefix: secret/k8s_operator/base-lsp.lsst.codes
 butlerPg:
   secretKey: butler-secret
