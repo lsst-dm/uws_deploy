@@ -5,6 +5,9 @@ image:
   tag: latest
 logLevel: INFO
 vaultPathPrefix: secret/k8s_operator/base-lsp.lsst.codes
+job:
+  image:
+    tag: 7-stack-lsst_distrib-d_2023_12_06
 butlerPg:
   secretKey: butler-secret
   containerPath: /home/lsst/.lsst
